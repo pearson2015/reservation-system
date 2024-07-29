@@ -5,5 +5,3 @@ spring:
     password: customer_db
     initialization-mode: always
   sql.init.mode: always
-system:
-  test: default123
