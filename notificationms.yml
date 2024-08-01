@@ -1,0 +1,21 @@
+server.port: 5000
+spring:
+  application.name: notificationms
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["prometheus","health","refresh"]
+
+system:
+  aws:
+    sqs:
+      name: notification-queue
+    access:
+      key: AKIA34V4PZUUDM7FYUMD
+    secret:
+      key: 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
