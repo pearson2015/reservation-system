@@ -4,9 +4,9 @@ spring:
   application:
     name: hotelmanagementms
   datasource:
-    url: jdbc:mysql://localhost:3306/hotelmanagementms_db
-    username: hotelmanagementms_db
-    password: hotelmanagementms_db
+    url: jdbc:mysql://localhost:3306/hotelmanagement_db
+    username: hotelmanagement_db
+    password: hotelmanagement_db
     initialization-mode: always
   sql.init.mode: always
   jpa:
