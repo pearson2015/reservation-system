@@ -1,5 +1,7 @@
 server:
   port: 3000
+  tomcat:
+    enableLoggingRequestDetails: true
 spring:
   application:
     name: hotelmanagementms
@@ -22,3 +24,13 @@ management:
     web:
       exposure:
         include: ["prometheus","health","refresh"]
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+system:
+  api:
+    customerServiceUrl: http://localhost:8000
+    reservationServiceUrl: http://localhost:9000
+    paymentServiceUrl: http://localhost:7000
