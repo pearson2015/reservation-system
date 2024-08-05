@@ -1,6 +1,8 @@
-server.port: 7000
+server:
+  port: 7000
 spring:
-  application.name: paymentms
+  application:
+    name: paymentms
   datasource:
     url: jdbc:mysql://localhost:3306/payment_db
     username: payment_db
