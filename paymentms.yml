@@ -13,19 +13,24 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
     show-sql: false
     properties.hibernate.format_sql: false
+    hibernate.ddl-auto: update
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: host.docker.internal:9092
     consumer:
       group-id: notification-group
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://host.docker.internal:8761/eureka/
 management:
   endpoints:
     web:
       exposure:
         include: ["prometheus","health","refresh"]
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
 
 system:
   notificationTopic: notification_topic
