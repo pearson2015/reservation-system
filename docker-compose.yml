@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  registryms:
+  #depends_on:
+    #- zipkin
+  image: mydarkworld/registryms
+  container_name: registryms
+  restart: on-failure
+  environment:
+    - server.port=8761
+    - spring.application.name=registryms
+    #- spring.zipkin.baseUrl=http://localhost:9411/
+  network_mode: host
