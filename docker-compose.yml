@@ -11,6 +11,28 @@ services:
       - spring.application.name=registryms
       #- spring.zipkin.baseUrl=http://localhost:9411/
     network_mode: host
+    
+  configms:
+    depends_on:
+      - registryms
+      #- zipkin
+    image: mydarkworld/configms:latest
+    container_name: configms
+    restart: on-failure
+    environment:
+      - server.port=8888
+      - spring.application.name=configms
+      - eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+      - spring.zipkin.baseUrl=http://localhost:9411/
+    network_mode: host  
+    
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    environment:
+      - server.port=9411
+    network_mode: host
+    
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
