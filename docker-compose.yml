@@ -18,4 +18,4 @@ services:
       - server.port=9090
     network_mode: host
     volumes:
-      - /home/shahin/Work/reservation_system_project/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /home/shahin/Work/reservation-system-project/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
