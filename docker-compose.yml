@@ -28,7 +28,7 @@ services:
     
   customerms:
     depends_on:
-      - amazon_books_db
+      - customer_db
       - registryms
     #  - gatewayms
       - configms
